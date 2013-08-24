@@ -6,3 +6,11 @@ Given /the following (.*?) exist:$/ do |type, table|
     end
   end
 end
+
+Given /^I am logged in as "(.*?)" with pass "(.*?)"$/ do |user, pass|
+  visit '/accounts/login'
+  fill_in 'user_login', :with => user
+  fill_in 'user_password', :with => pass
+  click_button 'Login'
+  assert page.has_content? 'Login successful'
+end

@@ -21,4 +21,6 @@ Feature: Merge Articles
             | id | type    | author | body     | article_id | user_id | created_at          |
             | 1  | Comment | user_1 | Comment1 | 3          | 2       | 2013-24-08 23:31:00 |
             | 2  | Comment | user_1 | Comment2 | 4          | 2       | 2013-24-08 24:01:00 |
-
+    Scenario: An admin can merge articles
+	Given I am logged in as "admin" with pass "aaaaaaaa"
+	And I am on the Edit Page of Article with id 3
