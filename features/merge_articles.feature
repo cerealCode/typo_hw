@@ -55,7 +55,11 @@ Feature: Merge Articles
 	Then I should see "Comment1"
 	And I should see "Comment2"
 
-
+    Scenario: The title of the merged article shoud be the title from either one of the originals
+	Given the article with ids "3" and "4" were merged
+	And I am on the home page
+	Then I should see "Article1"
+	And I should not see "Article2"
 
 
 
