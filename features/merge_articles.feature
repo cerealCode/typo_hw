@@ -24,3 +24,9 @@ Feature: Merge Articles
     Scenario: An admin can merge articles
 	Given I am logged in as "admin" with pass "aaaaaaaa"
 	And I am on the Edit Page of Article with id 3
+	Then I should see "Merge Articles"
+	When I fill in "merge_with" with "4"
+	And I press "Merge"
+	Then I should be on the admin content page
+	And I should see "Articles successfully merged!"
+
