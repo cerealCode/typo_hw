@@ -8,3 +8,11 @@ Feature: Create and Edit categories
 	And I am logged into the admin panel
 	When I follow "Categories"
 
+    Scenario: Link should not be broken
+	Then I should see "Categories"
+	And I should see "Permalink"
+	And I should see "General"
+
+
+
+
