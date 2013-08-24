@@ -19,4 +19,9 @@ Feature: Create and Edit categories
 	Then I should see "Category1"
 	And I should see "no article"
 
+    Scenario: It should be possible to edit existing categories
+	When I follow "General"
+	Then I fill in "Description" with "test1, test2, test3"
+	And I press "Save"
+	Then I should see "test1"
 
