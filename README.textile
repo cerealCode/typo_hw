@@ -1,3 +1,14 @@
+
+Edx SaaS2 Homework 1
+lephuocdai
+lephuocdaijapan@gmail.com
+https://github.com/lephuocdai/typo
+
+
+
+
+
+
 h1. About Typo
 
 Typo has been around since March of 2005 making it one of the oldest blogging platforms in Rails.
