@@ -47,4 +47,15 @@ Feature: Merge Articles
 	Then "User1" should be author of 1 articles
 	And "User2" should be author of 0 articles
 
+    Scenario: The merged article should carry the comments of both previous articles
+	Given the article with ids "3" and "4" were merged
+	And I am on the home page
+	Then I should see "Article1"
+	When I follow "Article1"
+	Then I should see "Comment1"
+	And I should see "Comment2"
+
+
+
+
 
