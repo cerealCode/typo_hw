@@ -42,6 +42,9 @@ Feature: Merge Articles
 	Then I should see "Content1"
 	And I should see "Content2"
 
-
+    Scenario: The merged article should have one author (either one of the originals)
+	Given the article with ids "3" and "4" were merged
+	Then "User1" should be author of 1 articles
+	And "User2" should be author of 0 articles
 
 
