@@ -34,6 +34,13 @@ Feature: Merge Articles
 	And I am on the Edit Page of Article with id 3
 	Then I should not see "Merge Articles"
 
+    Scenario: The merged article should contain the text of both previous articles
+	Given the article with ids "3" and "4" were merged
+	And I am on the home page
+	Then I should see "Article1"
+	When I follow "Article1"
+	Then I should see "Content1"
+	And I should see "Content2"
 
 
 
