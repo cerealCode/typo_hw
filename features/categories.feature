@@ -13,6 +13,10 @@ Feature: Create and Edit categories
 	And I should see "Permalink"
 	And I should see "General"
 
-
+    Scenario: It should be possible to create new categories
+	When I fill in "Name" with "Category1"
+	And I press "Save"
+	Then I should see "Category1"
+	And I should see "no article"
 
 
