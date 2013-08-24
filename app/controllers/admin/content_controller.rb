@@ -8,7 +8,8 @@ class Admin::ContentController < Admin::BaseController
 
   def merge_with
 #    unless Profile.find(current_user.profile_id).label == "admin"
-#      flash[:error] = _("You are not")
+#      flash[:error] = _("You are not allowed to perform a merge action")
+#       redirect_to :action => index
 #    end
     article = Article.find_by_id(params[:id])
     if article.merge_with(params[:merge_with])

@@ -29,4 +29,12 @@ Feature: Merge Articles
 	And I press "Merge"
 	Then I should be on the admin content page
 	And I should see "Articles successfully merged!"
+    Scenario: A non-admin cannot merge articles
+	Given I am logged in as "user_1" with pass "1111111"
+	And I am on the Edit Page of Article with id 3
+	Then I should not see "Merge Articles"
+
+
+
+
 
